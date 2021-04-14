@@ -1,0 +1,363 @@
+/*   CSS rules to specify fonts
+
+    font-family: 'Cabin', sans-serif;
+
+    font-family: 'Great Vibes', cursive; */
+
+/*Global Styles  */
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+    background-color:#EAEDF4;
+    color: #232323;
+}
+
+ul{
+  list-style:none;
+}
+
+/*Section styles */
+
+/* Header*/
+/* Layout */
+
+div.header-wrap{
+    /* this only exists to give the header a parent with a set height so position-relative -> top: can work, so I can get rid of the white bar at the top of the screen. I'm sure there's a less dumb way to do this so please let me know what that is! */
+    height: 100vh;
+}
+
+header{
+  background-image: url(https://psd.hackeryou.com/assignment1-assets/tasty/asset-1.jpg);
+  height: 100vh;
+  width: 103vw;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  left: -5%;
+  top: -1%;
+  position:relative;
+
+}
+
+/* Nav */
+
+div.header-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+
+li.nav-menu{
+  position:relative;
+  top: 20px;
+  background-color:#FDC800;
+  text-align: right;
+  padding: 0 5px;
+}
+
+nav.top-nav ul:first-child{
+  margin-top: 50px;
+}
+
+li.nav-menu a{
+  text-decoration: none;
+  color:#232323;
+  font-family:'Cabin', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+
+
+}
+
+
+
+/* Hamburger icon */
+li.hamburger-icon{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+li.hamburger-icon div{
+  width: 60px;
+  height: 4px;
+  background: black;
+  margin: 10px;
+  border-radius: 25%;
+
+}
+
+/* Typography */
+h1{
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.5rem;
+  font-weight: lighter;
+}
+
+header h2{
+  display:block;
+  font-family: 'Cabin', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 35%;
+  margin:auto;
+  left: 0;
+  right: 0;
+  width: 100vw;
+
+}
+
+h2 span{
+  display: block;
+  font-family: 'Great Vibes', cursive;
+  text-transform: capitalize;
+  font-size: 12rem;
+  font-weight: lighter;
+}
+
+ul.social-icons{
+  display:none;
+}
+
+/* About-section styles */
+
+.about .wrapper{
+  margin: 0 15px;
+
+}
+
+
+
+.about h2{
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    font-size: 4.5rem;
+    margin: 40px 0 10px 0;
+    font-weight: lighter;
+
+}
+
+.about p{
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2.9rem;
+  margin: 0;
+}
+
+/* find out more button */
+.about a{
+  /* button layout */
+  display: block;
+  box-sizing: border-box;
+  background-color: #FDC800;
+  width: 220px;
+  height: 50px;
+  padding: 15px 20px;
+  margin: 20px auto;
+
+  /* text styling */
+  color:#232323;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  
+}
+
+/* middle nav section */
+
+section.mid-nav{
+  background-color:#232323;
+  position: relative;
+  width: 103vw;
+  height: 100%;
+  left: -5%;
+  top: 10px;
+  margin: auto;
+}
+
+.mid-nav ul{
+  margin: 20px 0 0 5%; 
+  padding: 30px 0;
+
+}
+
+.mid-nav ul li {
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+  padding: 0;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin: 35px 0;
+}
+
+.mid-nav a{
+  color:#F8F8F8;
+  text-decoration: none;
+}
+
+.mid-nav i{
+  display: block;
+  margin: 10px 0;
+  font-size: 3.5rem;
+}
+
+
+/* Breakpoints */
+  
+/* 481px — 768px: iPads, Tablets */
+@media(min-width:481px){
+  header{
+    left: -2%
+  }
+
+  li.hamburger-icon{
+    margin-right: 20px;
+  }
+
+  li.nav-menu{
+    margin-right: 20px;
+  }
+
+  h1{
+    margin-left: 30px;
+  }
+  header h2{
+    left: 30px;
+    font-size: 4.2rem;
+  }
+
+  header h2 span{
+    font-size: 15rem;
+  }
+
+  .about ul{
+    left: -2%;
+  }
+
+  .about .wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+
+  .mid-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    height: 150px;
+  }
+
+  .mid-nav ul li{
+    margin: 0 30px;
+  }
+}
+
+/* 769px — 1024px: Small screens, laptops */
+@media(min-width:769px){
+
+
+  div.header-bar{
+    margin:auto;
+    max-width: 900px;
+  }
+
+  nav.top-nav ul{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  li.nav-menu{
+    background-color: transparent;
+    margin: 0 20px;
+  }
+
+
+  section.mid-nav{
+    left:-2%;
+  }
+
+  .mid-nav ul{
+    padding-right: 4%;
+  }
+}
+
+/* 1025px — 1200px: Desktops, large screens */
+@media(min-width:1025px){
+
+  /* nav bar */
+  div.header-bar{
+    max-width: 1200px;
+  }
+
+
+/* social media icons */
+
+  ul.social-icons{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    right: 8%;
+    top: 30%;
+  }
+
+  ul.social-icons li{
+    margin: 12px 0;
+  }
+
+  ul.social-icons a{
+    color:#FDC800;
+    font-size: 2.5rem;
+  }
+
+  /* layout */
+
+  section.about{
+    padding: 40px 0;
+  }
+
+  .mid-nav ul{
+    margin-left: 4%;
+  }
+
+  .mid-nav ul li{
+    margin: 0 70px;
+  }
+
+  .about .wrapper{
+    max-width: 700px;
+  }
+
+
+  /* typography */
+
+  h1{
+    font-size: 5.5rem;
+  }
+
+  .about h2{
+    font-size: 4.2rem;
+  }
+
+  .about p{
+    font-size: 1.8rem;
+  }
+
+  
+
+}
